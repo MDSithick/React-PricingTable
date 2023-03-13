@@ -1,38 +1,63 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin:50px auto;
+  padding: 20px;
+  background: linear-gradient(to bottom right,rgb(37, 37, 234),rgb(115, 191, 222));
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+  margin: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color:whitesmoke;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card:hover{
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+.month{
+  font-size: small;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.list{
+  text-align: left;
+}
+
+
+
+.button{
+  width: 300px;
+  padding: 10px;
+  font-size: medium;
+  background-color: cornflowerblue;
+  color: aliceblue;
+  border-radius: 20px;
+}
+
+button:hover{
+  background-color: rgb(30, 94, 214);
+}
+
+.membership{
+  font-family: monospace;
+  color: cadetblue;
+}
+.disable{
+  opacity: 0.3;
+}
+
+@media (max-width:450px){
+  .App{
+    grid-template-columns: 1fr;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
